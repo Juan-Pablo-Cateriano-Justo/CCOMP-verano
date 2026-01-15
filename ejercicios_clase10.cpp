@@ -236,6 +236,35 @@ int main(){
     return 0;
 }
       */
+
+
+#include <iostream>
+using namespace std;
+
+float Sum(float a, float b) { return a + b; }
+float Res(float a, float b) { return a - b; }
+
+typedef float(*Operation)(float, float);
+
+int main() {
+    Operation vp[2] = { &Sum, &Res }; 
     
+    float a, b, c; 
+    int opt;
+
+    cout << "Ingresa dos numeros: ";
+    cin >> a >> b;
     
+    cout << "Elige operacion (0: Suma, 1: Resta): ";
+    cin >> opt;
+
+    if (opt >= 0 && opt < 2) {
+        c = vp[opt](a, b); 
+        cout << "Resultado: " << c << endl;
+    } else {
+        cout << "Opcion no valida." << endl;  
+    }
+
+    return 0;
+}
     
