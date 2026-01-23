@@ -1,3 +1,199 @@
+
+/*
+class Persona {
+
+protected: 
+	string nombre;
+	int edad;
+
+public: 
+	
+	Persona(string n, int e) : nombre(n), edad(e) {}
+	
+	void mostrarDatos(){
+		cout<< "Nombre: " << nombre << "edad: " << edad << endl; 
+	}
+};
+
+
+class Estudiante : public Persona {
+	
+private: 
+	
+	string carrera; 
+	double promedio; 
+
+public: 
+	
+	Estudiante(string  n, int e, string c, double p) : Persona(n, e), carrera(c), promedio(p) {}
+	
+	
+	void mostrarEstudiante(){ 
+		mostrarDatos(); 
+		cout<< "Carrera : " << carrera << endl; 
+		cout<< "Promedio: " << promedio << endl; 
+	}
+	
+};
+
+int main() {
+	Estudiante e("Ana", 21, "Derecho", 18.45); 
+	e.mostrarEstudiante();
+	
+	
+	
+	return 0;
+}
+*/
+/*
+#include <iostream> 
+#include <string> 
+using namespace std; 
+
+
+class Animal {
+
+protected:
+	string nombre;
+	int edad; 
+	
+public: 
+	
+	Animal(string n, int e) : nombre(n), edad(e) {}
+	virtual void hacerSonido(){
+		cout<< "Realiza sonido generico.." << endl;
+	}
+}; 
+
+
+class Perro : public Animal {
+	
+private: 
+	string raza; 
+	string juguete;
+	
+public:
+	
+	Perro(string n, int e, string r, string j) : Animal(n, e), raza(r), juguete(j) {}
+	
+	
+	void hacerSonido() override {
+		cout << "Guau!  Guau! " << endl; 
+	}
+};
+
+int main() {
+	Perro d("Mauricio", 6 , "Pudolf", "Hueso de juguete"); 
+	
+	d.hacerSonido();
+	
+	
+	
+}
+*/
+
+/*
+#include <iostream>
+#include <string> 
+using namespace std; 
+
+class Vehiculo {
+protected: 
+	string marca; 
+	int velocidadMaxima; 
+	
+public: 
+	
+	void mostrarDatos(){
+		cout<< "Marca: " << marca << endl; 
+		cout<< "Velocidad Maxima: " << velocidadMaxima << endl; 
+	}
+	
+};
+
+class Auto : public Vehiculo {
+private: 
+	int numeroPuertas; 
+	
+};
+*/
+
+
+
+
+
+//En computacion cientifica y graficos por computadora se utilizan estructuras como vectores(1 dimension) matrices(2 dimensioenes) (recuerden que pueden ser muchas dimensiones más)
+//Se pide diseñar una jerarquia de clases usando herencia que cumpla: UNa clase base llamada Estructura. Una clase derivada Vector. Una clase derivada Matriz. 
+//TOdos deben Almacenar sus datos dinámicamente, conocer sus dimensiones y tener método mostrarDimensiones(); 
+// ¿que atributos deben ir en clase base? ¿cuales deben ser protedted para que las 
+#include <iostream>
+#include <string>
+using namespace std; 
+
+/*
+class Estructura {
+	int filas; 
+	int columnas; 
+	
+	
+public: 
+	
+	Estructura( int f, int c) : filas(f), columnas(c) {}
+	
+	virtual void  mostrarDim(){
+		cout<< "filas: " << filas << endl; 
+		cout<< "columnas: " << columnas << endl;
+	}
+		
+	virtual ~Estructura() {}
+};
+
+class Vector : public Estructura {
+	
+private:
+ double* datos;
+ 
+public: 
+	Vector( int m)  : Estructura(1, n) {
+		datos = new double[n];
+	}
+	
+	~Vector() {
+		delete[] datos;
+	}
+	
+	void mostrarDim() override {
+		cout<< "Vector de dimension: " << columnas << endl; 
+	}
+};
+
+class Matriz : public Estructura {
+
+private: 
+	double** datos;
+
+public: 
+	Matriz(int f, int c) : Estructura(f, c) { 
+		datos = new double*[f];
+		for(int i=0; i< f ; i++){
+			datos[i] = new double[c]; 
+		}
+	
+	void mostrarDim() override{
+			cout<< "Matriz de: " << filas << " x " << columnas << endl; 
+		}
+};
+
+	
+int main(){
+	Vector v(5,4) 
+	Matriz m(3,4); 
+	
+	v.mostrarDim();
+	m.mostrarDim();
+
+}
+*/
 #include <iostream>
 #include <string>
 #include <cmath>
