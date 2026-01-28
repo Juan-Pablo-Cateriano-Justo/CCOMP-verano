@@ -1,3 +1,4 @@
+/*
 #include <iostream> 
 #include <vector>
 using namespace std; 
@@ -43,5 +44,26 @@ v.push_back(30);
 
 
 }
+  */
+
+
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+
+int main(){
+  vector<int> v; 
+
+  v.push_back(100);
+  v.push_back(200);
+  v.push_back(300); 
+
+  cout<< "Recorrido usando auto o iteradores: " << endl; 
+
+  for(auto it = v.begin(); it != v.endl(); ++it){
+    cout<< *it << endl; 
+  }
+
+    return 0; 
   
-} 
+}
